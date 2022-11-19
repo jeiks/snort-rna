@@ -11,10 +11,10 @@ It was hosted in my website in the past.
 Now it's here for the idea doesn't go away and someone can use it if it's useful.
 
 Contents:
-* [Completion of Course Work](https://github.com/jeiks/snort-rna/TCC.pdf) (It is in Portuguese)
-* [App to create the Neural Newtork (https://github.com/jeiks/snort-rna/JavaNNS)](JavaNNS)
-* [Software to convert from JavaNNS to C](https://github.com/jeiks/snort-rna/snns2c)
-* [Snort IDS code](https://github.com/jeiks/snort-rna/snort)
+* [Completion of Course Work](https://github.com/jeiks/snort-rna/blob/main/TCC.pdf) (It is in Portuguese)
+* [App to create the Neural Newtork (https://github.com/jeiks/snort-rna/JavaNNS)](https://github.com/jeiks/snort-rna/tree/main/JavaNNS)
+* [Software to convert from JavaNNS to C](https://github.com/jeiks/snort-rna/tree/main/snns2c)
+* [Snort IDS code](https://github.com/jeiks/snort-rna/tree/main/snort)
 
 Some time after finish this work, I see the better way is to create a Snort's plugin.
 
@@ -37,10 +37,10 @@ Ele estava hospedado no meu site antigamente.
 Mas agora ele está aqui, pois a ideia é que ele não acabe e que sirva para alguém que o ache útil.
 
 Conteúdo:
-* [Trabalho de conclusão de curso](https://github.com/jeiks/snort-rna/TCC.pdf)
-* [Aplicativo para criar a Rede Neural (JavaNNS)](https://github.com/jeiks/snort-rna/JavaNNS)
-* [Software paraq converter a rede do JavaNNS para C](https://github.com/jeiks/snort-rna/snns2c)
-* [Código do SDI Snort](https://github.com/jeiks/snort-rna/snort)
+* [Trabalho de conclusão de curso](https://github.com/jeiks/snort-rna/blob/main/TCC.pdf)
+* [Aplicativo para criar a Rede Neural (JavaNNS)](https://github.com/jeiks/snort-rna/tree/main/JavaNNS)
+* [Software paraq converter a rede do JavaNNS para C](https://github.com/jeiks/snort-rna/tree/main/snns2c)
+* [Código do SDI Snort](https://github.com/jeiks/snort-rna/tree/main/snort)
 
 Depois de um tempo que terminei esse trabalho, vi que a melhor forma de fazer essa adaptação seria criar um plugin para o Snort.
 
