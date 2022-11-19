@@ -1,4 +1,4 @@
-# Neural Network in Snort
+# [Neural Network in Snort](https://github.com/jeiks/snort-rna)
 
 This repository hosts my Completion of Course Work at my College where I added a Neural Network support in Snort (Intrusion Detection System) to detect attacks coming from the network.
 
@@ -11,10 +11,10 @@ It was hosted in my website in the past.
 Now it's here for the idea doesn't go away and someone can use it if it's useful.
 
 Contents:
-* [Completion of Course Work](TCC.pdf) (It is in Portuguese)
-* [App to create the Neural Newtork (JavaNNS)](JavaNNS)
-* [Software to convert from JavaNNS to C](snns2c)
-* [Snort IDS code](snort)
+* [Completion of Course Work](https://github.com/jeiks/snort-rna/TCC.pdf) (It is in Portuguese)
+* [App to create the Neural Newtork (https://github.com/jeiks/snort-rna/JavaNNS)](JavaNNS)
+* [Software to convert from JavaNNS to C](https://github.com/jeiks/snort-rna/snns2c)
+* [Snort IDS code](https://github.com/jeiks/snort-rna/snort)
 
 Some time after finish this work, I see the better way is to create a Snort's plugin.
 
@@ -24,7 +24,7 @@ So... have fun! =)
 
 <hr>
 
-# Redes Neurais no Snort 
+# [Redes Neurais no Snort](https://github.com/jeiks/snort-rna)
 
 Este repositório abriga meu trabalho de conclusão de curso de minha graduação, onde eu adicionei uma Rede Neural artificial no Snort (Sistema de Detecção de Intrusos) para detectar ataques vindos da Rede de Computadores.
 
@@ -37,10 +37,10 @@ Ele estava hospedado no meu site antigamente.
 Mas agora ele está aqui, pois a ideia é que ele não acabe e que sirva para alguém que o ache útil.
 
 Conteúdo:
-* [Trabalho de conclusão de curso](TCC.pdf)
-* [Aplicativo para criar a Rede Neural (JavaNNS)](JavaNNS)
-* [Software paraq converter a rede do JavaNNS para C](snns2c)
-* [Código do SDI Snort](snort)
+* [Trabalho de conclusão de curso](https://github.com/jeiks/snort-rna/TCC.pdf)
+* [Aplicativo para criar a Rede Neural (JavaNNS)](https://github.com/jeiks/snort-rna/JavaNNS)
+* [Software paraq converter a rede do JavaNNS para C](https://github.com/jeiks/snort-rna/snns2c)
+* [Código do SDI Snort](https://github.com/jeiks/snort-rna/snort)
 
 Depois de um tempo que terminei esse trabalho, vi que a melhor forma de fazer essa adaptação seria criar um plugin para o Snort.
 
