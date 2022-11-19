@@ -1,4 +1,4 @@
-# RNA in Snort
+# Neural Network in Snort
 
 This repository hosts my Completion of Course Work at my College where I added a Neural Network support in Snort to detect attacks coming from the network.
 
