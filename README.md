@@ -39,7 +39,7 @@ Mas agora ele está aqui, pois a ideia é que ele não acabe e que sirva para al
 Conteúdo:
 * [Trabalho de conclusão de curso](https://github.com/jeiks/snort-rna/blob/main/TCC.pdf)
 * [Aplicativo para criar a Rede Neural (JavaNNS)](https://github.com/jeiks/snort-rna/tree/main/JavaNNS)
-* [Software paraq converter a rede do JavaNNS para C](https://github.com/jeiks/snort-rna/tree/main/snns2c)
+* [Software para converter a rede do JavaNNS para C](https://github.com/jeiks/snort-rna/tree/main/snns2c)
 * [Código do SDI Snort](https://github.com/jeiks/snort-rna/tree/main/snort)
 
 Depois de um tempo que terminei esse trabalho, vi que a melhor forma de fazer essa adaptação seria criar um plugin para o Snort.
