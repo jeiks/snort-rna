@@ -1,0 +1,352 @@
+--- SNNSv4.2/tools/sources/snns2c.c	1998-09-03 10:37:57.000000000 -0300
++++ snns2c.c	2008-02-20 20:13:41.000000000 -0300
+@@ -1,7 +1,7 @@
+ /******************************************************************************
+-  FILE           : $Source: /projects/higgs1/SNNS/CVS/SNNS/tools/sources/snns2c.c,v $
++  FILE           : $Source: /usr/local/bv/SNNS/SNNSv4.1/tools/sources/RCS/snns2c.c,v $
+   SHORTNAME      : snns2c.c
+-  SNNS VERSION   : 4.2
++  SNNS VERSION   : 4.1
+ 
+   PURPOSE        : Converter for SNNS-net -Files to  executable C-Source
+                    only for Feed-Forward- and Elman-nets.
+@@ -25,25 +25,22 @@
+   LAST UPDATE    : 23.02.95 (Bernward Kett)
+ 
+   CHANGED BY     : 
+-  RCS VERSION    : $Revision: 1.19 $
+-  LAST CHANGE    : $Date: 1998/04/22 16:48:12 $
++  IDENTIFICATION : $State: Exp $ $Locker:  $
++  RCS VERSION    : $Revision: 1.11 $
++  LAST CHANGE    : $Date: 1995/11/16 07:21:57 $
+ 
+-    Copyright (c) 1990-1995  SNNS Group, IPVR, Univ. Stuttgart, FRG
+-    Copyright (c) 1996-1998  SNNS Group, WSI, Univ. Tuebingen, FRG
++             Copyright (c) 1990-1995  SNNS Group, IPVR, Univ. Stuttgart, FRG
+   
+   used files     : glob_typ.h, kr_ui.h      from kernel/sources
+                    libkernel.a              from kernel/bin/<architecture>
+                    functions.h, templates.h from actual directory
+ ******************************************************************************/
+-#include <config.h>
+  
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
+-#ifdef HAVE_LIMITS_H
+ #include <limits.h>
+-#endif
+ #include <time.h>
+ #include <memory.h>
+ #include "glob_typ.h"
+@@ -303,7 +300,7 @@
+ {
+   static char *NotSupportedLearnFuncs[] = {
+     "ART1", "ART2", "ARTMAP", "BackPercolation", "Hebbian", "RM_delta",
+-    "Kohonen", NULL
++    "RCC", "Kohonen", NULL
+   };
+ 
+   char *LearnFunc = krui_getLearnFunc();     /* learning function of the network */
+@@ -1016,7 +1013,7 @@
+ {  
+ 	int i;
+ 
+-  fprintf(fOutFile, "\n  static pUnit %s[%d] = ", 
++  fprintf(fOutFile, "\n  pUnit %s[%d] = ", 
+           layer->name, NoOf(layer->members) );
+ 
+   /* write the Members of the layer */
+@@ -1041,7 +1038,7 @@
+   *****************************************************************************/
+ void writeUnitNew(pUnit unit, FILE *fOutFile, int count_links)
+  {
+-
++  int i;
+   static int first_time = 1, is_Bptt = 0; /* to avoid unneeded procedure calls */
+  
+  	/* initialisation of is_Bptt */
+@@ -1273,27 +1270,27 @@
+    * because here the Units are rewritten completely */
+   if (is_TDNN_net()) {
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n", NoOfUnits
++	    "  UnitType Units[%d] = \n  {\n", NoOfUnits
+ 	    );
+   }
+   else if (is_CPN_net() ){
+     fflush(fOutFile);
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n %s,\n",
++	    "  UnitType Units[%d] = \n  {\n %s,\n",
+ 	    NoOfUnits + 1, CpnDummyUnit
+ 	    );
+     fflush(fOutFile);
+   }
+   else if (is_BPTT_net() ) {
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n    %s,\n",
++	    "  UnitType Units[%d] = \n  {\n    %s,\n",
+ 	    NoOfUnits + 1,
+ 	    "{ {0.0, 0.0}, 0.0, 0, {NULL /* NO SOURCES */}, {0.0 /* NO MEMBERS*/} }"
+ 	    );
+   }
+   else {
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n    %s,\n",
++	    "  UnitType Units[%d] = \n  {\n    %s,\n",
+ 	    NoOfUnits + 1,
+ 	    "{ 0.0, 0.0, 0, {NULL /* NO SOURCES */}, {0.0 /* NO MEMBERS*/} }"
+ 	    );
+@@ -1352,20 +1349,20 @@
+    * because here the Units are rewritten completely */
+   if (is_TDNN_net()) {
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n", NoOfUnits
++	    "  UnitType Units[%d] = \n  {\n", NoOfUnits
+ 	    );
+   }
+   else if (is_CPN_net() ){
+     fflush(fOutFile);
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n %s,\n",
++	    "  UnitType Units[%d] = \n  {\n %s,\n",
+ 	    NoOfUnits + 1, CpnDummyUnit
+ 	    );
+     fflush(fOutFile);
+   }
+   else if (is_BPTT_net() ) {
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n    %s,\n",
++	    "  UnitType Units[%d] = \n  {\n    %s,\n",
+ 	    NoOfUnits + 1,
+ 	    "{ {0.0, 0.0}, 0.0, 0, {NULL /* NO SOURCES */}, {0.0 /* NO MEMBERS*/} }"
+ 	    );
+@@ -1373,7 +1370,7 @@
+   else {
+ 
+     fprintf(fOutFile, 
+-	    "  static UnitType Units[%d] = \n  {\n    %s,\n",
++	    "  UnitType Units[%d] = \n  {\n    %s,\n",
+ 	    NoOfUnits + 1,
+ 	    "{ 0.0, 0.0, 0, NULL , NULL }"
+  /* old  "{ 0.0, 0.0, 0, {NULL * NO SOURCES *}, {0.0 * NO MEMBERS*} }" */
+@@ -1426,6 +1423,7 @@
+   *****************************************************************************/
+  void writeForwardDeclarationAllUnits(pUnit Units, int NoOfUnits, FILE *fOutFile)
+  {
++   int nr;
+  
+    fprintf(fOutFile, "  /* Forward Declaration for all unit types */\n");
+  
+@@ -1435,26 +1433,26 @@
+     * because here the Units are rewritten completely */
+    if (is_TDNN_net()) {
+      fprintf(fOutFile, 
+- 	    "  static UnitType Units[%d];\n", NoOfUnits
++ 	    "  UnitType Units[%d];\n", NoOfUnits
+  	    );
+    }
+    else if (is_CPN_net() ){
+      fflush(fOutFile);
+      fprintf(fOutFile, 
+- 	    "  static UnitType Units[%d];\n",
++ 	    "  UnitType Units[%d];\n",
+  	    NoOfUnits + 1
+  	    );
+      fflush(fOutFile);
+    }
+    else if (is_BPTT_net() ) {
+      fprintf(fOutFile, 
+- 	    "  static UnitType Units[%d];\n",
++ 	    "  UnitType Units[%d];\n",
+  	    NoOfUnits + 1
+  	    );
+    }
+    else {
+      fprintf(fOutFile, 
+- 	    "  static UnitType Units[%d];\n",
++ 	    "  UnitType Units[%d];\n",
+  	    NoOfUnits + 1
+  	    );
+    }
+@@ -1492,16 +1490,16 @@
+ 
+  void writeAllSources(pUnit Units, int NoOfUnits, FILE *fOutFile)
+  {
+-   int nr;
++   int nr, i ;
+  
+    fprintf(fOutFile, "  /* Sources definition section */\n");
+-   fprintf(fOutFile, "  static pUnit Sources[] =  {\n");
++   fprintf(fOutFile, "  pUnit Sources[] =  {\n");
+  
+    for(nr = 0; nr < NoOfUnits; nr++)
+-   {
++     {
+        if(writeSource(Units + nr, fOutFile))
+          fprintf(fOutFile, "\n");
+-   }
++     }
+    fprintf(fOutFile, "\n  };\n\n");
+  }
+ 
+@@ -1537,13 +1535,13 @@
+ 
+  void writeAllWeights(pUnit Units, int NoOfUnits, FILE *fOutFile)
+  {
+-   int nr;
++   int nr, i ;
+ 
+    fprintf(fOutFile, "  /* Weigths definition section */\n");
+-   fprintf(fOutFile, "  static float Weights[] =  {\n");
++   fprintf(fOutFile, "  float Weights[] =  {\n");
+  
+    for(nr = 0; nr < NoOfUnits; nr++)
+-   {
++     {
+       if( writeWeigths(Units + nr, fOutFile))
+          fprintf(fOutFile, "\n");
+    }
+@@ -1619,7 +1617,7 @@
+   pUnit  unit;
+   int    nr, layerNo, unitNo, sourceNo, pos, maxSource = 0, 
+   maxFeature = 0, maxDelay = 0, maxTotalDelay = 0;
+-  FILE   *fOutFile, *fHeaderFile;
++  FILE   *fOutFile;//, *fHeaderFile;
+   pList  OutList, FunctionList;
+   time_t   timer;
+   char   HeaderFile[50];
+@@ -1692,9 +1690,7 @@
+     fprintf(fOutFile, "%s\n", ACT_FUNCTIONS[element(FunctionList, nr)]);
+   }
+   /* to avoid unneeded include-files */
+-  fprintf(fOutFile, "#ifndef NULL\n");
+   fprintf(fOutFile, "#define NULL (void *)0\n");
+-  fprintf(fOutFile, "#endif\n");
+ 
+   /* write Procedure-Header */
+   fprintf(fOutFile, ProcHeader, ProcName);
+@@ -1702,8 +1698,8 @@
+   /* if more than one net is included in the application, 
+      the types must be defined local to the procedure. So 
+      it's done generally */
+-  fprintf(fOutFile, TdnnTypeTemplate, maxTotalDelay, 
+-				      maxFeature, maxFeature, maxDelay);
++//  fprintf(fOutFile, TdnnTypeTemplate, maxTotalDelay, 
++//				      maxFeature, maxFeature, maxDelay);
+ 
+ 
+   /* The Delays of the TDNN are organized as a ring-buffer 
+@@ -1832,8 +1828,8 @@
+   /* Preparations for the Header-File */
+   strcpy(HeaderFile, OutFile);
+   HeaderFile[strlen(HeaderFile) - 1] = 'h';
+-  fHeaderFile = fopen(HeaderFile, "w");   
+-  if (!fHeaderFile) return(CANT_OPEN);
++  //fHeaderFile = fopen(HeaderFile, "w");   
++  //if (!fHeaderFile) return(CANT_OPEN);
+  
+   /* prepare Output Stream */
+   fOutFile = fopen(OutFile, "w");   
+@@ -1870,36 +1866,35 @@
+      ------------------------------------------------------------ */
+ 
+   /** write Header-File **/
+-  fprintf(fHeaderFile, HeaderFileTemplate,
++  //fprintf(fHeaderFile, HeaderFileTemplate,
+ 	  HeaderFile, ctime(&timer), ProcName,
+ 	  ProcName, NoOf(globalLayers[order[0]].members),
+ 	  NoOf(OutList), ProcName);
+-  fclose(fHeaderFile);
++  //fclose(fHeaderFile);
+ 
+   /** write the Programm Header and Act-Functions **/
+-  fprintf(fOutFile, ProgHeader, OutFile, ctime(&timer) );
++//  fprintf(fOutFile, ProgHeader, OutFile, ctime(&timer) );
++  fprintf(fOutFile, "#include <math.h>\n#include \"rna_alg.h\"\n", OutFile, ctime(&timer) );
+   for(nr = 0; nr < NoOf(FunctionList); nr ++) {
+     fprintf(fOutFile, "%s\n", ACT_FUNCTIONS[element(FunctionList, nr)]);
+   }
+   /* to avoid unneeded include-files */
+-  fprintf(fOutFile, "#ifndef NULL\n");
+   fprintf(fOutFile, "#define NULL (void *)0\n");
+-  fprintf(fOutFile, "#endif\n");
+ 
+   
+   /* if more than one net is included in the application, 
+      the types must be defined local to the procedure 
+      so it's done generally */
+-  if (is_CPN_net() ) {
+-    fprintf(fOutFile, CpnTypeTemplate, maxSource, maxSource, 
+-			       NoOf(globalLayers[2].members));
+-  }
+-  else if (is_BPTT_net() ) {
+-    fprintf(fOutFile, BpttTypeTemplate, maxSource, maxSource);
+-  }  
+-  else {
+-    fprintf(fOutFile, TypeTemplate);
+-  }
++//  if (is_CPN_net() ) {
++//    fprintf(fOutFile, CpnTypeTemplate, maxSource, maxSource, 
++//			       NoOf(globalLayers[2].members));
++//  }
++//  else if (is_BPTT_net() ) {
++//    fprintf(fOutFile, BpttTypeTemplate, maxSource, maxSource);
++//  }  
++//  else {
++//    fprintf(fOutFile, TypeTemplate, maxSource, maxSource);
++//  }
+ 
+   /* write the Units, their weights and biases */
+    writeForwardDeclarationAllUnits(globalUnits, NoOfUnits, fOutFile);
+@@ -2122,30 +2117,29 @@
+   int      *TDNN_prot; 
+ 
+   /* check Params */
+-  if ((argc < 2) || (argc > 4)) {
+-    fprintf(stderr, "usage : %s <netfile> [<output-file> [<function-name>] ]\n",
+-						argv[0]);
++  if (argc < 2) {
++    fprintf(stderr, "usage : %s <netfile>\n", argv[0]);
+     return(WRONG_PARAM);
+   }
+   strcpy(NetFileName, argv[1]);
+-  if (argc >= 3) {               /* C-File-Name mentioned in the command-line */ 
+-    strcpy(CFileName, argv[2]);
+-  }
+-  else {
+-    strcpy(CFileName, argv[1]);  /* taking Netfile Name */
++//  if (argc >= 3) {               /* C-File-Name mentioned in the command-line */ 
++  strcpy(CFileName, "rna_alg.c");
++//  }
++//  else {
++//    strcpy(CFileName, argv[1]);  /* taking Netfile Name */
+     /* if the ending is not ".net" surprising Names may occur */
+-    strcpy(CFileName + strlen(CFileName) - 3, "c\0"); 
+-  }
+-  if (argc ==4) {               /* Function-Name mentioned in the command-line */
+-    strcpy(ProcName, argv[3]);
++//    strcpy(CFileName + strlen(CFileName) - 3, "c\0"); 
++//  }
++//  if (argc ==4) {               /* Function-Name mentioned in the command-line */
++    strcpy(ProcName, "Rna_alg");
+     toAlphaNum(ProcName);       /* Function Name must not contain special chars */
+-  } 
+-  else {
+-    /* define procedure-name for propagate-function */
+-    strncpy(ProcName, CFileName, strlen(CFileName) - 2);
+-    ProcName[strlen(CFileName) -2] = '\0';
+-    toAlphaNum(ProcName);       /* Function Name must not contain special chars */
+-  }
++//  } 
++//  else {
++//    /* define procedure-name for propagate-function */
++//    strncpy(ProcName, CFileName, strlen(CFileName) - 2);
++//    ProcName[strlen(CFileName) -2] = '\0';
++//    toAlphaNum(ProcName);       /* Function Name must not contain special chars */
++//  }
+ 
+   /* Write a Message (what to do) on screen */
+   printf(HeadingTemplate, NetFileName, CFileName, ProcName);

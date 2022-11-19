@@ -1,0 +1,107 @@
+
+An unexpected exception has been detected in native code outside the VM.
+Unexpected Signal : 11 occurred at PC=0xAADA283F
+Function=trainFFNet+0x7B
+Library=/home/computacao/karla/libSNNS_jkr.so
+
+Current Java thread:
+	at javanns.KernelInterface.pruneNet(Native Method)
+	at javanns.Network.pruneNet(javanns/Network.java:433)
+	at javanns.PruningPanel$PrunThread.run(javanns/ControlPanel.java:1109)
+
+Dynamic libraries:
+08048000-08056000 r-xp 00000000 08:02 8995330    /usr/lib/j2re1.4/bin/java
+08056000-08059000 rwxp 0000d000 08:02 8995330    /usr/lib/j2re1.4/bin/java
+aa7e8000-aa820000 rwxs 00000000 00:07 2359304    /SYSV00000000 (deleted)
+aad78000-aadf6000 r-xp 00000000 00:11 344106     /home/computacao/karla/.nfs0005402a0000000b
+aadf6000-aadfb000 rwxp 0007d000 00:11 344106     /home/computacao/karla/.nfs0005402a0000000b
+aaf00000-aaf01000 r-xp 00000000 08:02 8831173    /usr/lib/gconv/ISO8859-1.so
+aaf01000-aaf03000 rwxp 00000000 08:02 8831173    /usr/lib/gconv/ISO8859-1.so
+aaf04000-aaf20000 r-xp 00000000 08:02 8865836    /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2
+aaf20000-aaf22000 rwxp 0001b000 08:02 8865836    /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2
+aaf22000-aaf29000 r-xp 00000000 08:02 8835388    /usr/lib/libXrender.so.1.3.0
+aaf29000-aaf2a000 rwxp 00006000 08:02 8835388    /usr/lib/libXrender.so.1.3.0
+aaf2a000-aaf32000 r-xp 00000000 08:02 8835477    /usr/lib/libXcursor.so.1.0.2
+aaf32000-aaf33000 rwxp 00007000 08:02 8835477    /usr/lib/libXcursor.so.1.0.2
+aaf40000-aaf42000 r-xp 00000000 08:02 8865837    /usr/X11R6/lib/X11/locale/lib/common/xlcDef.so.2
+aaf42000-aaf43000 rwxp 00001000 08:02 8865837    /usr/X11R6/lib/X11/locale/lib/common/xlcDef.so.2
+aaf43000-aaffd000 r-xp 00000000 08:02 9077211    /usr/lib/j2re1.4/lib/i386/libfontmanager.so
+aaffd000-ab018000 rwxp 000b9000 08:02 9077211    /usr/lib/j2re1.4/lib/i386/libfontmanager.so
+ab019000-ab02d000 r-xp 00000000 08:02 8865386    /usr/X11R6/lib/libICE.so.6.3
+ab02d000-ab02e000 rwxp 00013000 08:02 8865386    /usr/X11R6/lib/libICE.so.6.3
+ab030000-ab038000 r-xp 00000000 08:02 8866873    /usr/X11R6/lib/libSM.so.6.0
+ab038000-ab039000 rwxp 00007000 08:02 8866873    /usr/X11R6/lib/libSM.so.6.0
+ab039000-ab0fd000 r-xp 00000000 08:02 8865842    /usr/X11R6/lib/libX11.so.6.2
+ab0fd000-ab100000 rwxp 000c4000 08:02 8865842    /usr/X11R6/lib/libX11.so.6.2
+ab100000-ab104000 r-xp 00000000 08:02 8866890    /usr/X11R6/lib/libXtst.so.6.1
+ab104000-ab105000 rwxp 00004000 08:02 8866890    /usr/X11R6/lib/libXtst.so.6.1
+ab105000-ab112000 r-xp 00000000 08:02 8865848    /usr/X11R6/lib/libXext.so.6.4
+ab112000-ab113000 rwxp 0000c000 08:02 8865848    /usr/X11R6/lib/libXext.so.6.4
+ab113000-ab160000 r-xp 00000000 08:02 8866876    /usr/X11R6/lib/libXt.so.6.0
+ab160000-ab163000 rwxp 0004d000 08:02 8866876    /usr/X11R6/lib/libXt.so.6.0
+ab164000-ab16b000 r-xp 00000000 08:02 8866882    /usr/X11R6/lib/libXp.so.6.2
+ab16b000-ab16c000 rwxp 00006000 08:02 8866882    /usr/X11R6/lib/libXp.so.6.2
+ab179000-ab1cc000 r-xp 00000000 08:02 9077207    /usr/lib/j2re1.4/lib/i386/libmlib_image.so
+ab1cc000-ab1cd000 rwxp 00052000 08:02 9077207    /usr/lib/j2re1.4/lib/i386/libmlib_image.so
+ab1cd000-ab49e000 r-xp 00000000 08:02 9077208    /usr/lib/j2re1.4/lib/i386/libawt.so
+ab49e000-ab4b4000 rwxp 002d0000 08:02 9077208    /usr/lib/j2re1.4/lib/i386/libawt.so
+ab4d9000-ab592000 r-xs 00000000 00:11 344083     /home/computacao/karla/JavaNNS/JavaNNS.jar
+ab592000-ab64d000 r-xs 00000000 08:02 9077225    /usr/lib/j2re1.4/lib/ext/localedata.jar
+ab64d000-ab669000 r-xs 00000000 08:02 9077222    /usr/lib/j2re1.4/lib/ext/sunjce_provider.jar
+ab669000-ab66c000 r-xs 00000000 08:02 9077223    /usr/lib/j2re1.4/lib/ext/dnsns.jar
+ab66c000-ab679000 r-xs 00000000 08:02 9077224    /usr/lib/j2re1.4/lib/ext/ldapsec.jar
+ab936000-ab97d000 r-xp 00000000 08:02 9063580    /usr/lib/locale/locale-archive
+b5c2b000-b6174000 r-xs 00000000 08:02 9077762    /usr/lib/j2re1.4/lib/charsets.jar
+b6174000-b6185000 r-xs 00000000 08:02 9077227    /usr/lib/j2re1.4/lib/jce.jar
+b6185000-b625e000 r-xs 00000000 08:02 9077304    /usr/lib/j2re1.4/lib/jsse.jar
+b625e000-b6274000 r-xs 00000000 08:02 9077226    /usr/lib/j2re1.4/lib/sunrsasign.jar
+b62be000-b79a7000 r-xs 00000000 08:02 9077764    /usr/lib/j2re1.4/lib/rt.jar
+b79a7000-b79bb000 r-xp 00000000 08:02 9077200    /usr/lib/j2re1.4/lib/i386/libzip.so
+b79bb000-b79be000 rwxp 00013000 08:02 9077200    /usr/lib/j2re1.4/lib/i386/libzip.so
+b79be000-b79de000 r-xp 00000000 08:02 9077198    /usr/lib/j2re1.4/lib/i386/libjava.so
+b79de000-b79e0000 rwxp 0001f000 08:02 9077198    /usr/lib/j2re1.4/lib/i386/libjava.so
+b79e0000-b79f0000 r-xp 00000000 08:02 9077197    /usr/lib/j2re1.4/lib/i386/libverify.so
+b79f0000-b79f2000 rwxp 0000f000 08:02 9077197    /usr/lib/j2re1.4/lib/i386/libverify.so
+b79f2000-b79fc000 r-xp 00000000 08:02 7127365    /lib/tls/i686/cmov/libnss_files-2.3.5.so
+b79fc000-b79fe000 rwxp 00009000 08:02 7127365    /lib/tls/i686/cmov/libnss_files-2.3.5.so
+b79fe000-b7a06000 r-xp 00000000 08:02 7127367    /lib/tls/i686/cmov/libnss_nis-2.3.5.so
+b7a06000-b7a08000 rwxp 00008000 08:02 7127367    /lib/tls/i686/cmov/libnss_nis-2.3.5.so
+b7a08000-b7a0f000 r-xp 00000000 08:02 7127363    /lib/tls/i686/cmov/libnss_compat-2.3.5.so
+b7a0f000-b7a11000 rwxp 00006000 08:02 7127363    /lib/tls/i686/cmov/libnss_compat-2.3.5.so
+b7a1a000-b7a1e000 rwxs 00000000 08:02 1949747    /tmp/hsperfdata_karla/14149
+b7a1e000-b7a41000 r-xp 00000000 08:02 7127360    /lib/tls/i686/cmov/libm-2.3.5.so
+b7a41000-b7a43000 rwxp 00022000 08:02 7127360    /lib/tls/i686/cmov/libm-2.3.5.so
+b7a43000-b7a55000 r-xp 00000000 08:02 7127362    /lib/tls/i686/cmov/libnsl-2.3.5.so
+b7a55000-b7a57000 rwxp 00012000 08:02 7127362    /lib/tls/i686/cmov/libnsl-2.3.5.so
+b7a5d000-b7a65000 r-xp 00000000 08:02 9077187    /usr/lib/j2re1.4/lib/i386/native_threads/libhpi.so
+b7a65000-b7a66000 rwxp 00007000 08:02 9077187    /usr/lib/j2re1.4/lib/i386/native_threads/libhpi.so
+b7a66000-b7e62000 r-xp 00000000 08:02 9077192    /usr/lib/j2re1.4/lib/i386/client/libjvm.so
+b7e62000-b7e7d000 rwxp 003fb000 08:02 9077192    /usr/lib/j2re1.4/lib/i386/client/libjvm.so
+b7e90000-b7fbc000 r-xp 00000000 08:02 7127356    /lib/tls/i686/cmov/libc-2.3.5.so
+b7fbc000-b7fc1000 r-xp 0012c000 08:02 7127356    /lib/tls/i686/cmov/libc-2.3.5.so
+b7fc1000-b7fc4000 rwxp 00131000 08:02 7127356    /lib/tls/i686/cmov/libc-2.3.5.so
+b7fc6000-b7fc8000 r-xp 00000000 08:02 7127359    /lib/tls/i686/cmov/libdl-2.3.5.so
+b7fc8000-b7fca000 rwxp 00001000 08:02 7127359    /lib/tls/i686/cmov/libdl-2.3.5.so
+b7fca000-b7fd9000 r-xp 00000000 08:02 7127370    /lib/tls/i686/cmov/libpthread-2.3.5.so
+b7fd9000-b7fdb000 rwxp 0000e000 08:02 7127370    /lib/tls/i686/cmov/libpthread-2.3.5.so
+b7feb000-b8000000 r-xp 00000000 08:02 7127054    /lib/ld-2.3.5.so
+b8000000-b8002000 rwxp 00014000 08:02 7127054    /lib/ld-2.3.5.so
+
+Heap at VM Abort:
+Heap
+ def new generation   total 576K, used 235K [0xabb80000, 0xabc20000, 0xac060000)
+  eden space 512K,  38% used [0xabb80000, 0xabbb1d50, 0xabc00000)
+  from space 64K,  56% used [0xabc00000, 0xabc090e8, 0xabc10000)
+  to   space 64K,   0% used [0xabc10000, 0xabc10000, 0xabc20000)
+ tenured generation   total 4692K, used 4226K [0xac060000, 0xac4f5000, 0xafb80000)
+   the space 4692K,  90% used [0xac060000, 0xac4808b0, 0xac480a00, 0xac4f5000)
+ compacting perm gen  total 8192K, used 7938K [0xafb80000, 0xb0380000, 0xb3b80000)
+   the space 8192K,  96% used [0xafb80000, 0xb0340a28, 0xb0340c00, 0xb0380000)
+
+Local Time = Thu Sep 20 16:38:47 2007
+Elapsed Time = 1925
+#
+# The exception above was detected in native code outside the VM
+#
+# Java VM: Java HotSpot(TM) Client VM (1.4.2_05-b04 mixed mode)
+#

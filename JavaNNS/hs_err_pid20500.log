@@ -1,0 +1,112 @@
+
+An unexpected exception has been detected in native code outside the VM.
+Unexpected Signal : 8 occurred at PC=0xAAAEEC5D
+Function=(null)
+Library=/home/computacao/karla/JavaNNS/libSNNS_jkr.so
+
+NOTE: We are unable to locate the function name symbol for the error
+      just occurred. Please refer to release documentation for possible
+      reason and solutions.
+
+
+Current Java thread:
+	at javanns.KernelInterface.trainNetFixedTime(Native Method)
+	at javanns.NetTrainer.run(javanns/Network.java:1758)
+	at java.lang.Thread.run(Thread.java:534)
+
+Dynamic libraries:
+08048000-08056000 r-xp 00000000 08:02 4259842    /usr/lib/j2sdk1.4/bin/java
+08056000-08059000 rwxp 0000d000 08:02 4259842    /usr/lib/j2sdk1.4/bin/java
+aaa82000-aab00000 r-xp 00000000 00:0e 10682689   /home/computacao/karla/JavaNNS/libSNNS_jkr.so
+aab00000-aab05000 rwxp 0007d000 00:0e 10682689   /home/computacao/karla/JavaNNS/libSNNS_jkr.so
+aac0a000-aac0b000 r-xp 00000000 08:02 3754010    /usr/lib/gconv/ISO8859-1.so
+aac0b000-aac0d000 rwxp 00001000 08:02 3754010    /usr/lib/gconv/ISO8859-1.so
+aac0d000-aac13000 r-xs 00000000 08:02 3751963    /usr/lib/gconv/gconv-modules.cache
+aac14000-aac30000 r-xp 00000000 08:02 3785670    /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2
+aac30000-aac32000 rwxp 0001b000 08:02 3785670    /usr/X11R6/lib/X11/locale/lib/common/ximcp.so.2
+aac32000-aac3a000 r-xp 00000000 08:02 3759980    /usr/lib/libXrender.so.1.3.0
+aac3a000-aac3b000 rwxp 00007000 08:02 3759980    /usr/lib/libXrender.so.1.3.0
+aac3b000-aac43000 r-xp 00000000 08:02 3755684    /usr/lib/libXcursor.so.1.0.2
+aac43000-aac44000 rwxp 00007000 08:02 3755684    /usr/lib/libXcursor.so.1.0.2
+aac56000-aad10000 r-xp 00000000 08:02 4214795    /usr/lib/j2sdk1.4/jre/lib/i386/libfontmanager.so
+aad10000-aad2b000 rwxp 000b9000 08:02 4214795    /usr/lib/j2sdk1.4/jre/lib/i386/libfontmanager.so
+aad2c000-aad40000 r-xp 00000000 08:02 3785220    /usr/X11R6/lib/libICE.so.6.3
+aad40000-aad41000 rwxp 00013000 08:02 3785220    /usr/X11R6/lib/libICE.so.6.3
+aad43000-aad4b000 r-xp 00000000 08:02 3786578    /usr/X11R6/lib/libSM.so.6.0
+aad4b000-aad4c000 rwxp 00007000 08:02 3786578    /usr/X11R6/lib/libSM.so.6.0
+aad4c000-aae10000 r-xp 00000000 08:02 3785676    /usr/X11R6/lib/libX11.so.6.2
+aae10000-aae13000 rwxp 000c4000 08:02 3785676    /usr/X11R6/lib/libX11.so.6.2
+aae13000-aae17000 r-xp 00000000 08:02 3786595    /usr/X11R6/lib/libXtst.so.6.1
+aae17000-aae18000 rwxp 00004000 08:02 3786595    /usr/X11R6/lib/libXtst.so.6.1
+aae18000-aae25000 r-xp 00000000 08:02 3785682    /usr/X11R6/lib/libXext.so.6.4
+aae25000-aae26000 rwxp 0000c000 08:02 3785682    /usr/X11R6/lib/libXext.so.6.4
+aae26000-aae73000 r-xp 00000000 08:02 3786581    /usr/X11R6/lib/libXt.so.6.0
+aae73000-aae76000 rwxp 0004d000 08:02 3786581    /usr/X11R6/lib/libXt.so.6.0
+aae77000-aae7e000 r-xp 00000000 08:02 3786587    /usr/X11R6/lib/libXp.so.6.2
+aae7e000-aae7f000 rwxp 00006000 08:02 3786587    /usr/X11R6/lib/libXp.so.6.2
+aae8e000-aae90000 r-xp 00000000 08:02 3785671    /usr/X11R6/lib/X11/locale/lib/common/xlcDef.so.2
+aae90000-aae91000 rwxp 00001000 08:02 3785671    /usr/X11R6/lib/X11/locale/lib/common/xlcDef.so.2
+aae91000-aaee4000 r-xp 00000000 08:02 4214791    /usr/lib/j2sdk1.4/jre/lib/i386/libmlib_image.so
+aaee4000-aaee5000 rwxp 00052000 08:02 4214791    /usr/lib/j2sdk1.4/jre/lib/i386/libmlib_image.so
+aaee5000-ab1b6000 r-xp 00000000 08:02 4214792    /usr/lib/j2sdk1.4/jre/lib/i386/libawt.so
+ab1b6000-ab1cc000 rwxp 002d0000 08:02 4214792    /usr/lib/j2sdk1.4/jre/lib/i386/libawt.so
+ab1f1000-ab2aa000 r-xs 00000000 00:0e 344083     /home/computacao/karla/JavaNNS/JavaNNS.jar
+ab2aa000-ab366000 r-xs 00000000 08:02 4214810    /usr/lib/j2sdk1.4/jre/lib/ext/localedata.jar
+ab366000-ab369000 r-xs 00000000 08:02 4214808    /usr/lib/j2sdk1.4/jre/lib/ext/dnsns.jar
+ab369000-ab385000 r-xs 00000000 08:02 4214807    /usr/lib/j2sdk1.4/jre/lib/ext/sunjce_provider.jar
+ab385000-ab392000 r-xs 00000000 08:02 4214809    /usr/lib/j2sdk1.4/jre/lib/ext/ldapsec.jar
+ab64f000-ab69d000 r-xp 00000000 08:02 3968268    /usr/lib/locale/locale-archive
+b5952000-b5eab000 r-xs 00000000 08:02 4215064    /usr/lib/j2sdk1.4/jre/lib/charsets.jar
+b5eab000-b5ebc000 r-xs 00000000 08:02 4214812    /usr/lib/j2sdk1.4/jre/lib/jce.jar
+b5ebc000-b5f99000 r-xs 00000000 08:02 4215063    /usr/lib/j2sdk1.4/jre/lib/jsse.jar
+b5f99000-b5faf000 r-xs 00000000 08:02 4214811    /usr/lib/j2sdk1.4/jre/lib/sunrsasign.jar
+b5ff9000-b799d000 r-xs 00000000 08:02 4215066    /usr/lib/j2sdk1.4/jre/lib/rt.jar
+b799d000-b79b1000 r-xp 00000000 08:02 4214784    /usr/lib/j2sdk1.4/jre/lib/i386/libzip.so
+b79b1000-b79b4000 rwxp 00013000 08:02 4214784    /usr/lib/j2sdk1.4/jre/lib/i386/libzip.so
+b79b4000-b79d4000 r-xp 00000000 08:02 4214782    /usr/lib/j2sdk1.4/jre/lib/i386/libjava.so
+b79d4000-b79d6000 rwxp 0001f000 08:02 4214782    /usr/lib/j2sdk1.4/jre/lib/i386/libjava.so
+b79d6000-b79e6000 r-xp 00000000 08:02 4214781    /usr/lib/j2sdk1.4/jre/lib/i386/libverify.so
+b79e6000-b79e8000 rwxp 0000f000 08:02 4214781    /usr/lib/j2sdk1.4/jre/lib/i386/libverify.so
+b79e8000-b79f1000 r-xp 00000000 08:02 7733313    /lib/tls/i686/cmov/libnss_files-2.3.6.so
+b79f1000-b79f3000 rwxp 00008000 08:02 7733313    /lib/tls/i686/cmov/libnss_files-2.3.6.so
+b79f3000-b79fb000 r-xp 00000000 08:02 7733322    /lib/tls/i686/cmov/libnss_nis-2.3.6.so
+b79fb000-b79fd000 rwxp 00007000 08:02 7733322    /lib/tls/i686/cmov/libnss_nis-2.3.6.so
+b79fd000-b7a04000 r-xp 00000000 08:02 7733311    /lib/tls/i686/cmov/libnss_compat-2.3.6.so
+b7a04000-b7a06000 rwxp 00006000 08:02 7733311    /lib/tls/i686/cmov/libnss_compat-2.3.6.so
+b7a14000-b7a18000 rwxs 00000000 08:02 5390413    /tmp/hsperfdata_karla/20500
+b7a18000-b7a3b000 r-xp 00000000 08:02 7733307    /lib/tls/i686/cmov/libm-2.3.6.so
+b7a3b000-b7a3d000 rwxp 00022000 08:02 7733307    /lib/tls/i686/cmov/libm-2.3.6.so
+b7a3d000-b7a4f000 r-xp 00000000 08:02 7733310    /lib/tls/i686/cmov/libnsl-2.3.6.so
+b7a4f000-b7a51000 rwxp 00011000 08:02 7733310    /lib/tls/i686/cmov/libnsl-2.3.6.so
+b7a5c000-b7a64000 r-xp 00000000 08:02 4214772    /usr/lib/j2sdk1.4/jre/lib/i386/native_threads/libhpi.so
+b7a64000-b7a65000 rwxp 00007000 08:02 4214772    /usr/lib/j2sdk1.4/jre/lib/i386/native_threads/libhpi.so
+b7a65000-b7e61000 r-xp 00000000 08:02 4214777    /usr/lib/j2sdk1.4/jre/lib/i386/client/libjvm.so
+b7e61000-b7e7c000 rwxp 003fb000 08:02 4214777    /usr/lib/j2sdk1.4/jre/lib/i386/client/libjvm.so
+b7e8f000-b7fb6000 r-xp 00000000 08:02 7733263    /lib/tls/i686/cmov/libc-2.3.6.so
+b7fb6000-b7fbb000 r-xp 00127000 08:02 7733263    /lib/tls/i686/cmov/libc-2.3.6.so
+b7fbb000-b7fbd000 rwxp 0012c000 08:02 7733263    /lib/tls/i686/cmov/libc-2.3.6.so
+b7fc0000-b7fc2000 r-xp 00000000 08:02 7733294    /lib/tls/i686/cmov/libdl-2.3.6.so
+b7fc2000-b7fc4000 rwxp 00001000 08:02 7733294    /lib/tls/i686/cmov/libdl-2.3.6.so
+b7fc5000-b7fd3000 r-xp 00000000 08:02 7733331    /lib/tls/i686/cmov/libpthread-2.3.6.so
+b7fd3000-b7fd5000 rwxp 0000e000 08:02 7733331    /lib/tls/i686/cmov/libpthread-2.3.6.so
+b7feb000-b8000000 r-xp 00000000 08:02 7733631    /lib/ld-2.3.6.so
+b8000000-b8002000 rwxp 00014000 08:02 7733631    /lib/ld-2.3.6.so
+
+Heap at VM Abort:
+Heap
+ def new generation   total 576K, used 18K [0xab8a0000, 0xab940000, 0xabd80000)
+  eden space 512K,   0% used [0xab8a0000, 0xab8a0038, 0xab920000)
+  from space 64K,  29% used [0xab920000, 0xab924ba8, 0xab930000)
+  to   space 64K,   0% used [0xab930000, 0xab930000, 0xab940000)
+ tenured generation   total 3336K, used 2889K [0xabd80000, 0xac0c2000, 0xaf8a0000)
+   the space 3336K,  86% used [0xabd80000, 0xac052488, 0xac052600, 0xac0c2000)
+ compacting perm gen  total 8192K, used 7975K [0xaf8a0000, 0xb00a0000, 0xb38a0000)
+   the space 8192K,  97% used [0xaf8a0000, 0xb0069f58, 0xb006a000, 0xb00a0000)
+
+Local Time = Thu Oct  4 18:50:15 2007
+Elapsed Time = 1973
+#
+# The exception above was detected in native code outside the VM
+#
+# Java VM: Java HotSpot(TM) Client VM (1.4.2_05-b04 mixed mode)
+#
